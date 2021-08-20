@@ -8,9 +8,6 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./quote.component.css'],
 })
 export class QuoteComponent implements OnInit {
-
-  // generate random Id
-
   createQuoteForm = false;
   // ngForm to access the inputs fields on submit
   @ViewChild('f') formQuote: NgForm;
@@ -18,21 +15,21 @@ export class QuoteComponent implements OnInit {
   // quote array
   quotes: Quote[] = [
     new Quote(
-      1,
+      Math.floor(Math.random() * 100),
       'Tina Fey',
       'Wilson Kinyua',
       'There are no mistakes, only opportunities',
       new Date('2021, 08, 20')
     ),
     new Quote(
-      2,
+      Math.floor(Math.random() * 100),
       'T.S. Eliot',
       'Wilson Kinyua',
       'Every moment is a fresh beginning',
       new Date('2021, 08, 20')
     ),
     new Quote(
-      3,
+      Math.floor(Math.random() * 100),
       'Kate Winslet ',
       'Wilson Kinyua',
       'Life is short, and it is here to be lived',
@@ -40,7 +37,9 @@ export class QuoteComponent implements OnInit {
     ),
   ];
 
-  constructor() {}
+  constructor() {
+    console.log(this.quotes);
+  }
 
   ngOnInit(): void {}
 
@@ -55,11 +54,11 @@ export class QuoteComponent implements OnInit {
   onSubmit() {
     this.quotes.push(
       new Quote(
-        4,
+        Math.floor(Math.random() * 100),
         this.formQuote.value.author,
         this.formQuote.value.createdBy,
         this.formQuote.value.quote,
-        new Date('2021, 05, 20')
+        new Date()
       )
     );
     this.formQuote.reset();

@@ -1,2 +1,62 @@
-/* You can add global styles to this file, and also import other style files */
-@import "~bootstrap/dist/css/bootstrap.css"
+/*
+    author: Wilson Kinyua
+    email: wilsonkinyuam@gmail.com
+    license: MIT
+    description: All css for the app
+    create date: 20/08/2021
+*/
+
+@import "~bootstrap/dist/css/bootstrap.css";
+
+/* fonts */
+@import url("https://fonts.googleapis.com/css2?family=Merienda:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+
+.float-right {
+  text-align: end;
+}
+
+.logo {
+  height: 50px;
+}
+
+.color-primary {
+  color: rgb(235, 174, 8);
+}
+
+.bg-yellow {
+  background-color: rgb(235, 174, 8);
+  color: white;
+}
+
+.bg-yellow:hover {
+  color: white;
+}
+
+p {
+  color: #4b4b4b;
+  line-height: 1.5em;
+}
+
+/* homepage */
+.homepage-intro {
+  background-image: url("https://cdn.pixabay.com/photo/2018/11/01/00/55/animal-3786987_960_720.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+.homepage-intro h1 {
+  font-size: 3.1em;
+  color: #343434;
+  font-weight: 900;
+  text-transform: capitalize;
+  font-family: "Merienda", cursive;
+}
+.homepage-intro p {
+  font-weight: 500;
+}
+
+.author {
+  font-family: "Pacifico", cursive;
+}

@@ -63,4 +63,10 @@ export class QuoteComponent implements OnInit {
     );
     this.formQuote.reset();
   }
+
+  // view quote details
+  viewDetails(index) {
+    // e.preventDefauly();
+    this.quotes[index].viewQuoteDetails = !this.quotes[index].viewQuoteDetails;
+  }
 }

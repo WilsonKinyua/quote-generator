@@ -24,14 +24,14 @@ export class QuoteComponent implements OnInit {
     new Quote(
       Math.floor(Math.random() * 100),
       'T.S. Eliot',
-      'Wilson Kinyua',
+      'Mary Jack',
       'Every moment is a fresh beginning',
       new Date('2021, 08, 20')
     ),
     new Quote(
       Math.floor(Math.random() * 100),
       'Kate Winslet ',
-      'Wilson Kinyua',
+      'John Warutere',
       'Life is short, and it is here to be lived',
       new Date('2021, 08, 20')
     ),

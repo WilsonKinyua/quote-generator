@@ -6,12 +6,12 @@
       always wake up ready to seize the day, and sometimes need a reminder that <span class="color-primary">life</span>
       is a great <span class="color-primary">gift</span>.
     </p>
-    <a class="btn bg-yellow mt-2 text-center" data-toggle="modal" data-target="#createQuote">Create Quote
+    <a class="btn bg-yellow mt-2 text-center" data-toggle="modal" data-target="#createQuote" (click)="displayCreateQuoteForm()">Create Quote
       <i class="fa fa-plus"></i>
     </a>
   </div>
   <!-- create quote -->
-  <div class="container mt-4 row">
+  <div class="container mt-4 row" *ngIf="createQuoteForm">
     <div class="col-md-3"></div>
     <div class="col-md-6 card">
       <p class="text-italic text-danger">Fill all the fields to create a quote</p>

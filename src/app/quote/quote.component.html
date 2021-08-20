@@ -36,8 +36,8 @@
             <p class="text-danger error-block" *ngIf="!quote.valid && quote.touched"><small>Enter the quote!</small></p>
           </div>
         </div>
+        <button type="submit" class="btn btn-lg bg-yellow" [disabled]="!f.valid">Add</button>
       </form>
-      <button type="submit" class="btn bg-yellow" [disabled]="!f.valid">Add</button>
     </div>
   </div>
   <div class="row">

@@ -8,9 +8,13 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./quote.component.css'],
 })
 export class QuoteComponent implements OnInit {
-  @ViewChild('f') formQuote: NgForm;
+
+  // generate random Id
 
   createQuoteForm = false;
+  // ngForm to access the inputs fields on submit
+  @ViewChild('f') formQuote: NgForm;
+
   // quote array
   quotes: Quote[] = [
     new Quote(
@@ -47,7 +51,17 @@ export class QuoteComponent implements OnInit {
       : (this.createQuoteForm = true);
   }
 
-  onSubmit() {}
-
-  // validated form
+  // onSubmit form add quote
+  onSubmit() {
+    this.quotes.push(
+      new Quote(
+        4,
+        this.formQuote.value.author,
+        this.formQuote.value.createdBy,
+        this.formQuote.value.quote,
+        new Date('2021, 05, 20')
+      )
+    );
+    this.formQuote.reset();
+  }
 }

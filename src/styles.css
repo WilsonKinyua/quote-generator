@@ -53,6 +53,10 @@ p {
   font-size: 13px;
 }
 
+.error-block {
+  font-size: 13px;
+}
+
 /* homepage */
 .homepage-intro {
   background-image: url("https://cdn.pixabay.com/photo/2018/11/01/00/55/animal-3786987_960_720.jpg");
@@ -112,7 +116,7 @@ p {
   box-shadow: 0 0 11px 5px rgb(103 58 183 / 10%);
   margin-bottom: 30px;
   padding: 20px 10px;
-  text-align: center;
+  /* text-align: center; */
   transition: all 300ms ease-in-out;
   -webkit-transition: all 300ms ease-in-out;
 }

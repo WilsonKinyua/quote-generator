@@ -48,6 +48,11 @@ p {
   font-family: "Noto Sans", sans-serif;
 }
 
+.text-italic {
+  font-style: italic;
+  font-size: 13px;
+}
+
 /* homepage */
 .homepage-intro {
   background-image: url("https://cdn.pixabay.com/photo/2018/11/01/00/55/animal-3786987_960_720.jpg");
@@ -93,6 +98,11 @@ p {
   margin: 0 auto;
   padding: 18px;
   width: 70px;
+}
+
+/* create quote */
+#createQuote input::placeholder, textarea::placeholder{
+  font-size: 13px;
 }
 
 .card {

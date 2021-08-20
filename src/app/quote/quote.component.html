@@ -6,6 +6,30 @@
       always wake up ready to seize the day, and sometimes need a reminder that <span class="color-primary">life</span>
       is a great <span class="color-primary">gift</span>.
     </p>
+    <a class="btn bg-yellow mt-2 text-center" data-toggle="modal" data-target="#createQuote">Create Quote
+      <i class="fa fa-plus"></i>
+    </a>
+  </div>
+  <!-- create quote -->
+  <div class="container mt-4 row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6 card">
+      <p class="text-italic text-danger">Fill all the fields to create a quote</p>
+      <form id="createQuote">
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <input type="text" class="form-control" name="author" placeholder="Enter author..." required>
+          </div>
+          <div class="col-md-6 mb-3">
+            <input type="text" class="form-control" name="author" placeholder="Created by..." required>
+          </div>
+          <div class="col-md-12 mb-3">
+            <textarea name="quote" id="quote" rows="3" class="form-control" placeholder="Enter quote..." required></textarea>
+          </div>
+        </div>
+      </form>
+      <button type="submit" class="btn bg-yellow">Add</button>
+    </div>
   </div>
   <div class="row">
     <div class="col-md-4 col-sm-6">

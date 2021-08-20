@@ -11,6 +11,7 @@
 /* fonts */
 @import url("https://fonts.googleapis.com/css2?family=Merienda:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
 
 .float-center {
   text-align: center;
@@ -33,9 +34,18 @@
   color: white;
 }
 
+.text-bold {
+  font-weight: 900;
+}
+
+a {
+  text-decoration: none;
+}
+
 p {
   color: #4b4b4b;
   line-height: 1.5em;
+  font-family: "Noto Sans", sans-serif;
 }
 
 /* homepage */
@@ -59,4 +69,64 @@ p {
 
 .author {
   font-family: "Pacifico", cursive;
+}
+/* quotes */
+.quotes h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.icon {
+  background: transparent none repeat scroll 0 0;
+  border-radius: 50%;
+  color: rgb(235, 174, 8);
+  border: 1px solid rgb(94, 87, 87);
+  display: block;
+  font-size: 28px;
+  float: none;
+  height: 70px;
+  line-height: 32px;
+  margin: 0 auto;
+  padding: 18px;
+  width: 70px;
+}
+
+.card {
+  background: #fff none repeat scroll 0 0;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 11px 5px rgb(103 58 183 / 10%);
+  margin-bottom: 30px;
+  padding: 20px 10px;
+  text-align: center;
+  transition: all 300ms ease-in-out;
+  -webkit-transition: all 300ms ease-in-out;
+}
+
+.card:hover {
+  box-shadow: 0 0 11px 5px rgba(70, 41, 121, 0.25);
+  background: linear-gradient(-19deg, rgba(235, 174, 8, 0.95) 0px);
+}
+
+.card-text a {
+  color: rgb(87, 87, 87);
+  text-align: center;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 16px;
+}
+/* quote details */
+.quote-details a {
+  color: rgb(235, 174, 8);
+}
+
+.quote-details a:hover {
+  color: rgb(235, 174, 8);
+}
+.fa-trash {
+  color: red;
 }

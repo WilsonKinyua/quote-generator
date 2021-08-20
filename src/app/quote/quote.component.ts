@@ -10,7 +10,7 @@ import { NgForm } from '@angular/forms';
 export class QuoteComponent implements OnInit {
   @ViewChild('f') formQuote: NgForm;
 
-  createQuoteForm = true;
+  createQuoteForm = false;
   // quote array
   quotes: Quote[] = [
     new Quote(

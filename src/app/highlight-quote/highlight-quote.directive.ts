@@ -6,6 +6,12 @@ import { Directive, ElementRef } from '@angular/core';
 export class HighlightQuoteDirective {
 
   constructor(private selectedElement: ElementRef) {
-    this.selectedElement.nativeElement.style.backgroundColor = 'rgb(235, 174, 8)';
+    this.selectedElement.nativeElement.style.color = 'rgb(235, 174, 8)';
   }
+
+
+  // private highlightQuote(color:string) {
+  //   this.selectedElement.nativeElement.style.color = color;
+  // }
+
 }

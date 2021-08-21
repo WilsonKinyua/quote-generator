@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class QuoteComponent implements OnInit {
   createQuoteForm = false;
+  // cardWithHighestLikes = false;
   // quote array
   quotes: Quote[] = [
     new Quote(
@@ -77,6 +78,8 @@ export class QuoteComponent implements OnInit {
     if (upVoteQuoteEvent) {
       this.quotes[index].likes++;
     }
+
+    console.log(this.getQuoteWithHighestLikes())
   }
 
   // downvote a quote
@@ -85,4 +88,16 @@ export class QuoteComponent implements OnInit {
       this.quotes[index].dislikes--;
     }
   }
+
+  // getting the quote with the highest likes from the array
+  getQuoteWithHighestLikes() {
+    let quoteWithHighestLikes = this.quotes[0];
+    for (let i = 0; i < this.quotes.length; i++) {  
+      if (this.quotes[i].likes > quoteWithHighestLikes.likes) {
+        quoteWithHighestLikes = this.quotes[i];
+      }
+    }
+    return quoteWithHighestLikes;
+  }
+
 }

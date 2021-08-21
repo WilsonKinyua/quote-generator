@@ -18,7 +18,9 @@
   <div class="row">
 
     <div *ngFor="let quote of quotes; let i = index" class="col-md-4 col-sm-6">
+      <!-- appHighlightQuote -->
       <div class="card mt-5">
+        <!-- <div *ngIf="currentStatus !== 'open' || currentStatus !== 'reopen'"></div> -->
         <div class="text-center">
           <div class="icon">
             <i class="fa fa-quote-right"></i>
@@ -28,8 +30,8 @@
             <p class="card-text"><a (click)="viewDetails(i)">Learn More <i class="fa fa-chevron-right "></i></a></p>
           </div>
           <!-- quote details -->
-          <app-quote-detail [quote]="quote" *ngIf="quote.viewQuoteDetails"
-            (deleteQuoteEvent)='deleteTheQuote($event,i)' (upVoteQuoteEvent)="upVoteQuote($event,i)" (downVoteEvent)="downVoteQuote($event,i)"></app-quote-detail>
+          <app-quote-detail [quote]="quote" *ngIf="quote.viewQuoteDetails" (deleteQuoteEvent)='deleteTheQuote($event,i)'
+            (upVoteQuoteEvent)="upVoteQuote($event,i)" (downVoteEvent)="downVoteQuote($event,i)"></app-quote-detail>
         </div>
       </div>
     </div>

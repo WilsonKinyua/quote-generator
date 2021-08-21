@@ -11,6 +11,7 @@ import { FooterComponent } from './footer/footer.component';
 import { FormsModule } from '@angular/forms';
 import { QuoteFormComponent } from './quote/quote-form/quote-form.component';
 import { DayCountPipe } from './pipes/day-count.pipe';
+import { HighlightQuoteDirective } from './highlight-quote/highlight-quote.directive';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { DayCountPipe } from './pipes/day-count.pipe';
     FooterComponent,
     QuoteFormComponent,
     DayCountPipe,
+    HighlightQuoteDirective,
   ],
   imports: [
     BrowserModule,

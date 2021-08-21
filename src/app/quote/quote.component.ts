@@ -78,21 +78,20 @@ export class QuoteComponent implements OnInit {
     if (upVoteQuoteEvent) {
       this.quotes[index].likes++;
     }
-
-    console.log(this.getQuoteWithHighestLikes())
+    console.log(this.getQuoteWithHighestLikesAndDislikes());
   }
 
   // downvote a quote
   downVoteQuote(downVoteQuoteEvent, index) {
     if (downVoteQuoteEvent) {
-      this.quotes[index].dislikes--;
+      this.quotes[index].dislikes++;
     }
   }
 
   // getting the quote with the highest likes from the array
   getQuoteWithHighestLikes() {
     let quoteWithHighestLikes = this.quotes[0];
-    for (let i = 0; i < this.quotes.length; i++) {  
+    for (let i = 0; i < this.quotes.length; i++) {
       if (this.quotes[i].likes > quoteWithHighestLikes.likes) {
         quoteWithHighestLikes = this.quotes[i];
       }
@@ -100,4 +99,18 @@ export class QuoteComponent implements OnInit {
     return quoteWithHighestLikes;
   }
 
+  // get the quote with the highest number of likes and dislikes
+  getQuoteWithHighestLikesAndDislikes() {
+    let quoteWithHighestLikesAndDislikes = this.quotes[0];
+    for (let i = 0; i < this.quotes.length; i++) {
+      if (
+        this.quotes[i].likes + this.quotes[i].dislikes >
+        quoteWithHighestLikesAndDislikes.likes +
+          quoteWithHighestLikesAndDislikes.dislikes
+      ) {
+        quoteWithHighestLikesAndDislikes = this.quotes[i];
+      }
+    }
+    return quoteWithHighestLikesAndDislikes;
+  }
 }

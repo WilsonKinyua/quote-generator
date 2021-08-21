@@ -1,6 +1,5 @@
 import { Quote } from './../models/quote';
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { NgForm } from '@angular/forms';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-quote',
@@ -9,9 +8,6 @@ import { NgForm } from '@angular/forms';
 })
 export class QuoteComponent implements OnInit {
   createQuoteForm = false;
-  // ngForm to access the inputs fields on submit
-  @ViewChild('f') formQuote: NgForm;
-
   // quote array
   quotes: Quote[] = [
     new Quote(
@@ -50,23 +46,29 @@ export class QuoteComponent implements OnInit {
       : (this.createQuoteForm = true);
   }
 
-  // onSubmit form add quote
-  onSubmit() {
+  // add quote
+  createNewQuote(quote) {
+    let quoteId = Math.floor(Math.random() * 100);
     this.quotes.push(
       new Quote(
-        Math.floor(Math.random() * 100),
-        this.formQuote.value.author,
-        this.formQuote.value.createdBy,
-        this.formQuote.value.quote,
+        quoteId,
+        quote.author,
+        quote.createdBy,
+        quote.quoteDescription,
         new Date()
       )
     );
-    this.formQuote.reset();
   }
 
   // view quote details
   viewDetails(index) {
-    // e.preventDefauly();
     this.quotes[index].viewQuoteDetails = !this.quotes[index].viewQuoteDetails;
+  }
+
+  // delete a quote
+  deleteTheQuote(deleteQuoteEvent, index) {
+    if (deleteQuoteEvent) {
+      this.quotes.splice(index, 1);
+    }
   }
 }

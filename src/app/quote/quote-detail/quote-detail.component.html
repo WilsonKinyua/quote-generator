@@ -11,7 +11,7 @@
       <a href="#"><i class="fa fa-thumbs-down" title="dislike"></i> {{ quote.dislikes }}</a>
     </div>
     <div>
-      <a href="#"><i class="fa fa-trash" title="delete"></i></a>
+      <a (click)="deleteQuote(quote)"><i class="fa fa-trash" title="delete"></i></a>
     </div>
     <div>
       <!-- <span title="Days passed"><small>394 days ago</small></span> -->

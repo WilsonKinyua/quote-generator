@@ -71,4 +71,18 @@ export class QuoteComponent implements OnInit {
       this.quotes.splice(index, 1);
     }
   }
+
+  // upvote a quote
+  upVoteQuote(upVoteQuoteEvent, index) {
+    if (upVoteQuoteEvent) {
+      this.quotes[index].likes++;
+    }
+  }
+
+  // downvote a quote
+  downVoteQuote(downVoteQuoteEvent, index) {
+    if (downVoteQuoteEvent) {
+      this.quotes[index].dislikes--;
+    }
+  }
 }

@@ -1,14 +1,14 @@
 <div class="quote-details">
-  <div class="">
+  <div>
     <p><strong>Author:</strong> {{ quote.author }}</p>
     <p><strong>Created By:</strong> {{ quote.createdBy }}</p>
   </div>
   <div class="d-flex justify-content-around">
     <div>
-      <a href="#"><i class="fa fa-thumbs-up" title="like"></i> {{ quote.likes}}</a>
+      <a (click)="upVoteQuote(quote)"><i class="fa fa-thumbs-up" title="like"></i> {{ quote.likes}}</a>
     </div>
     <div>
-      <a href="#"><i class="fa fa-thumbs-down" title="dislike"></i> {{ quote.dislikes }}</a>
+      <a (click)="downVoteQuote(quote)"><i class="fa fa-thumbs-down" title="dislike"></i> {{ quote.dislikes }}</a>
     </div>
     <div>
       <a (click)="deleteQuote(quote)"><i class="fa fa-trash" title="delete"></i></a>

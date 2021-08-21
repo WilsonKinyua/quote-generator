@@ -29,7 +29,7 @@
           </div>
           <!-- quote details -->
           <app-quote-detail [quote]="quote" *ngIf="quote.viewQuoteDetails"
-            (deleteQuoteEvent)='deleteTheQuote($event,i)'></app-quote-detail>
+            (deleteQuoteEvent)='deleteTheQuote($event,i)' (upVoteQuoteEvent)="upVoteQuote($event,i)" (downVoteEvent)="downVoteQuote($event,i)"></app-quote-detail>
         </div>
       </div>
     </div>

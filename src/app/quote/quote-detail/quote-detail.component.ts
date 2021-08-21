@@ -10,6 +10,8 @@ export class QuoteDetailComponent implements OnInit {
 
   @Input() quote: Quote;
   @Output() deleteQuoteEvent = new EventEmitter<Quote>();
+  @Output() upVoteQuoteEvent = new EventEmitter<Quote>();
+  @Output() downVoteEvent = new EventEmitter<Quote>();
   constructor() { }
 
   ngOnInit(): void {
@@ -20,5 +22,14 @@ export class QuoteDetailComponent implements OnInit {
     this.deleteQuoteEvent.emit(quote);
   }
 
+  // emit an event to the parent component to upvote the quote
+  upVoteQuote(quote: Quote) {
+    this.upVoteQuoteEvent.emit(quote);
+  }
+
+  // emit an event to the parent component to downvote the quote
+  downVoteQuote(quote: Quote) {
+    this.downVoteEvent.emit(quote);
+  }
 
 }

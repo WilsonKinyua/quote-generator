@@ -29,7 +29,7 @@ export class QuoteComponent implements OnInit {
       'Kate Winslet ',
       'John Warutere',
       'Life is short, and it is here to be lived',
-      new Date('2021, 08, 20')
+      new Date('2021, 08, 19')
     ),
   ];
 
